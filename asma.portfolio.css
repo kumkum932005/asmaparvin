@@ -1,0 +1,368 @@
+/* ===== BODY / FULL PAGE BACKGROUND ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+  background: url('Background Picture.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px){
+  body {
+    background-attachment: scroll; 
+    background-position: top center; 
+  }
+}
+
+/* HEADER / NAVBAR */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f5f5dc; /* cream */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 8%;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: #4CAF50;
+  color: white;
+  border-radius: 6px;
+}
+
+/* HAMBURGER ICON */
+.hamburger {
+  font-size: 28px;
+  text-decoration: none;
+  color: #4CAF50;
+}
+
+/* HOME BUTTON */
+.home-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 3000;
+  transition: 0.3s;
+}
+
+.home-btn:hover {
+  background: #45a049;
+}
+
+/* HAMBURGER MENU */
+#menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  flex-direction: column;
+}
+
+#menu:target {
+  left: 0;
+}
+
+#menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 0;
+}
+
+#menu ul li a {
+  color: white;
+  font-size: 35px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#menu ul li a:hover {
+  color: #4CAF50;
+}
+
+.menu-btn {
+  background: #4CAF50;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 28px;
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 40px 20px;
+  margin-top: 90px;
+  flex: 1;
+}
+
+/* PROFILE SECTION */
+.profile {
+  background: rgba(245,245,220,0.9); /* cream color */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 650px;
+  width: 90%;
+  margin-left: auto;      
+  margin-right: 0;        
+  margin-top: -50px;
+  flex-wrap: wrap;
+}
+
+/* PROFILE IMAGE */
+.big-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #4CAF50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #f5f5dc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.small-circle img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* PROFILE TEXT */
+.profile-text {
+  flex: 1;
+  min-width: 220px;
+  text-align: right; 
+}
+
+.profile-text h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.profile-text p {
+  color: #66BB6A;
+  font-size: 14px;
+}
+
+/* SECTIONS */
+.section {
+  display: none; /* hide by default */
+  background: rgba(245,245,220,0.95);
+  border-radius: 10px;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+/* Show section when clicked */
+.section:target {
+  display: block;
+}
+
+/* Show first section (About) by default */
+.section:first-of-type {
+  display: block; /* accessibility */
+}
+
+/* CONTACT FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #4CAF50;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #f5f5dc;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #45a049;
+  outline: none;
+}
+
+/* SEND BUTTON */
+.send-btn {
+  width: 180px;
+  max-width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg,#4CAF50,#81C784);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.send-btn:hover {
+  background: linear-gradient(45deg,#388E3C,#66BB6A);
+}
+
+/* FOOTER */
+footer {
+  background: #ffe6f0;
+  color: #333;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+footer .social-links {
+  margin-top: 5px;
+}
+
+footer .social-links a {
+  color: #4CAF50;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    display: none;
+  }
+  .profile {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    justify-content: center;
+  }
+  .profile-text {
+    text-align: center;
+  }
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+/* ===== EXTRA MOBILE FIXES ===== */
+@media (max-width:480px){
+  .profile{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  .profile-text{
+    text-align: center;
+  }
+  .profile-text h1{
+    font-size: 20px;
+  }
+  .profile-text p{
+    font-size: 13px;
+  }
+  .send-btn{
+    width: 100%;
+  }
+  .section{
+    padding: 15px;
+  }
+  #menu ul li a{
+    font-size: 22px;
+  }
+  .home-btn{
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+/* JS MOBILE MENU SUPPORT */
+.nav-links.mobile-open{
+  display:flex !important;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 5%;
+  background: rgba(245,245,220,0.95);
+  padding: 15px;
+  border-radius: 10px;
+  gap: 15px;
+  z-index: 2000;
+}
+
+/* MINOR CONTRAST / COLOR TWEAKS */
+.nav-links a {
+  color: #388E3C;
+}
+
+.nav-links a:hover {
+  background: #66BB6A;
+  color: white;
+}
