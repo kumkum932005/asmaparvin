@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>My Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="asma.portfolio.css">
+
+<!-- EMAILJS SCRIPT -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    // EmailJS public key
+    emailjs.init("qslozzQRJhzebSxQB"); 
+  })();
+</script>
+
+<!-- Optional Contrast / Readability Tweaks -->
+<style>
+/* ===== Optional Contrast / Readability Tweaks ===== */
+body {
+  color: #222; /* Text color একটু গাঢ় করে readability বাড়ানো */
+  background-color: rgba(255, 255, 255, 0.95); /* subtle light bg for contrast */
+}
+
+.section h2 {
+  color: #111; /* Section headings বেশি readable */
+}
+
+.section p, .section li {
+  line-height: 1.6; /* Text spacing ঠিক রাখা */
+  letter-spacing: 0.5px; /* অল্প letter spacing readability বাড়ায় */
+}
+
+/* Home button contrast tweak */
+.home-btn {
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+}
+
+/* Menu links contrast tweak */
+.nav-links a, .menu-btn {
+  color: #000; /* Links বেশি readable */
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER / NAVBAR -->
+<header>
+  <div class="navbar">
+    <a href="#menu" class="hamburger">&#9776;</a>
+    <div class="logo">Asma Parvin</div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#Certificates / Certifications">Certificates / Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- Always visible Home button -->
+<a href="#" class="home-btn">Home</a>
+
+<!-- HAMBURGER MENU -->
+<nav id="menu">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#Certificates / Certifications">Certificates / Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li>
+      <a href="Asma_Parvin_CV.pdf" download class="menu-btn">Download CV</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- MAIN CONTAINER -->
+<div class="container">
+
+  <!-- PROFILE SECTION -->
+  <div class="profile">
+    <div class="big-circle">
+      <div class="small-circle">
+        <img src="kumu.jpg" alt="profile">
+      </div>
+    </div>
+
+    <div class="profile-text">
+      <h1>Asma Parvin</h1>
+      <p>Passionate About Technology & Innovation | AI & Cybersecurity Enthusiast</p>
+    </div>
+  </div>
+
+  <!-- ABOUT ME SECTION -->
+  <div class="section" id="about">
+    <h2>About Me</h2>
+    <p>Hello! I’m Asma Parvin, a Computer Science and Engineering (CSE) student currently studying at Bangladesh University. I am from Bangladesh and passionate about technology, especially in Artificial Intelligence and Cybersecurity.</p>
+    <p>I enjoy learning new skills, exploring innovative technologies, and understanding how AI and cybersecurity can solve real-world problems. Recently, I have also become interested in aviation technology and its intersection with AI and security.</p>
+    <p>My goal is to develop strong technical expertise and contribute to global technological solutions while representing my home country, Bangladesh.</p>
+  </div>
+
+  <!-- SKILLS SECTION -->
+  <div class="section" id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Programming Languages: C, C++, Java</li>
+      <li>Web Development: HTML, CSS</li>
+      <li>Microsoft Office:
+        <ul>
+          <li>Word – Document creation, formatting, reports</li>
+          <li>Excel – Data analysis, tables, charts, formulas</li>
+        </ul>
+      </li>
+      <li>Additional Skills:
+        <ul>
+          <li>Problem-solving mindset</li>
+          <li>Basic AI / Cybersecurity understanding</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- PROJECTS SECTION -->
+  <div class="section" id="projects">
+    <h2>Projects</h2>
+    <p><strong>Bluetooth Controlled Arduino Uno Robot Car (Robotics Project):</strong> I built an Arduino Uno based robotic car in a robotics project. It can move and perform basic automated functions using sensors and programming.</p>
+    <p><strong>Personal Portfolio Website:</strong> Built my own portfolio website to showcase my About Me, Skills, Projects, and Certificates . Developed using HTML and CSS. This website demonstrates my web development skills.</p>
+  </div>
+
+  <!-- CERTIFICATES SECTION -->
+  <div class="section" id="Certificates / Certifications">
+  <h2>Certificates</h2>
+
+  <div style="display:flex;gap:20px;justify-content:center;align-items:center;flex-wrap:wrap;">
+
+  <div style="text-align:center;">
+    <img src="ak.jpg" width="200">
+    <p><strong>Cyber Security Seminar - 2024</strong></p>
+  </div>
+
+  <div style="text-align:center;">
+    <img src="ka.jpg" width="200">
+    <p><strong>BU CodeX Round 1-A Programming Contest</strong></p>
+  </div>
+
+</div>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <div class="section" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: asmapervinkumkum@gmail.com</p>
+    <p>Phone: +8801795159535</p>
+
+    <!-- Contact Form -->
+    <form method="post" class="contact-form">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+      <button type="submit" class="send-btn">Send Message</button>
+    </form>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Asma Parvin</p>
+  <div class="social-links">
+    <a href="https://github.com/kumkum932005" target="_blank">
+     <i class="fa-brands fa-github"></i>
+    </a>
+   <!-- Facebook -->
+    <a href="https://www.facebook.com/AsmaParvinKumkum" target="_blank">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+  </div>
+</footer>
+
+<!-- EMAILJS INTEGRATION SCRIPT -->
+<script>
+document.querySelector('.contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // EmailJS Service ID & Template ID
+  emailjs.sendForm('service_k9w5j4v', 'template_93wkl1u', this)
+    .then(function() {
+      alert('Message sent successfully!');
+      document.querySelector('.contact-form').reset();
+    }, function(error) {
+      alert('Failed to send message. Please try again.');
+      console.log('EmailJS error:', error);
+    });
+});
+</script>
+
+<!-- SMOOTH HAMBURGER MENU TOGGLE -->
+<script>
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+</script>
+
+</body>
+</html>
